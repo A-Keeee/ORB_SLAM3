@@ -1,4 +1,6 @@
-# ORB-SLAM3
+import sys
+
+readme_content = """# ORB-SLAM3
 
 ### V1.0, 2021年12月22日
 **作者:** Carlos Campos, Richard Elvira, Juan J. Gómez Rodríguez, [José M. M. Montiel](http://webdiis.unizar.es/~josemari/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/).
@@ -42,7 +44,7 @@ ORB-SLAM3 遵循 [GPLv3 许可证](https://github.com/UZ-SLAMLab/ORB_SLAM3/LICEN
       title={{ORB-SLAM3}: An Accurate Open-Source Library for Visual, Visual-Inertial 
                and Multi-Map {SLAM}},
       author={Campos, Carlos AND Elvira, Richard AND G\´omez, Juan J. AND Montiel, 
-              Jos'e M. M. AND Tard'os, Juan D.},
+              Jos\'e M. M. AND Tard\'os, Juan D.},
       journal={IEEE Transactions on Robotics}, 
       volume={37},
       number={6},
@@ -233,3 +235,9 @@ EuRoC 提供了每个序列在 IMU 机体参考系下的真实值。由于纯视
 
 # 9. 相机校准
 您可以在 `Calibration_Tutorial.pdf` 里面找到视觉-惯性联合校准的详细教程和有效配置文件对应内容的介绍说明。
+"""
+
+with open("/home/ake/RMUA/ORB_SLAM3/README.md", "w") as f:
+    f.write(readme_content)
+
+print("Done")
